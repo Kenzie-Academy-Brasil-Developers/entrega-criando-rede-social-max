@@ -1,0 +1,22 @@
+.button-form__container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button__form {
+    width: 4.3125rem;
+    height: 2.375rem;
+    background-color: var(--color-blue-whiter);
+    color: var(--white);
+
+    border-radius: 5px;
+}
+
+.button__form:hover{
+    background-color: var(--color-blue);
+}
+
+.button__suggestion{
+    border: 2px solid var(--color-grey1);
+}

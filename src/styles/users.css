@@ -1,0 +1,28 @@
+.desc-user__container{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 8px;
+}
+
+.user__img{
+    width: 2.1875rem;
+}
+
+.user__desc > h2{
+    color: var(--color-grey1);
+
+    font-size: 1.1rem; 
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+.user__desc > p{
+    color: var(--color-grey2); 
+    font-size: 0.6875rem; 
+    line-height: 0.5rem;
+    font-weight: 300;
+}

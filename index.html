@@ -1,23 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt_br">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./src/styles/reset.css" />
-    <link rel="stylesheet" href="./src/styles/index.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/styles/reset.css" />
+  <link rel="stylesheet" href="./src/styles/globalStyles.css">
+  <link rel="stylesheet" href="./src/styles/buttons.css">
+  <link rel="stylesheet" href="./src/styles/users.css">
+  <link rel="stylesheet" href="./src/styles/index.css" />
 
-    <title>Criando rede social</title>
-  </head>
-  <body></body>
+  <!-- FONTE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <title>Criando rede social</title>
+</head>
+
+<body>
+  <header class="header__container">
+    <h1>TechPosters</h1>
+    <p>Sair</p>
+  </header>
+  <main class="main__container">
+    <section class="submit-post__container">
+      <section class="desc-user__container">
+        <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+        <div class="user__desc">
+          <h2>Samuel Leão</h2>
+          <p>Front End Enginner</p>
+        </div>
+      </section>
+      <form class="post-form__container">
+        <input class="input__form" type="text" placeholder="Digitar título do post" required>
+        <textarea class="text__form" placeholder="Digitar descrição do post" wrap="soft" required></textarea>
+      </form>
+      <section class="button-form__container">
+        <button class="button__form">Postar</button>
+      </section>
+    </section>
+
+    <aside class="follow-suggestions__container">
+      <h3>Sugestões para você seguir</h3>
+      <ul class="main-list__suggestions">
+        <li class="list__suggestions">
+          <section class="desc-user__container">
+            <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+            <div class="user__desc">
+              <h3>Samuel Leão</h3>
+              <p>Front End Enginner</p>
+            </div>
+          </section>
+          <button class="button__suggestion">Seguir</button>
+        </li>
+        <li class="list__suggestions">
+          <section class="desc-user__container">
+            <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+            <div class="user__desc">
+              <h3>Samuel Leão</h3>
+              <p>Front End Enginner</p>
+            </div>
+          </section>
+          <button class="button__suggestion">Seguir</button>
+        </li>
+      </ul>
+    </aside>
+
+    <section class="posts__container">
+      <ul class="main-list__posts">
+        <li class="list__posts">
+          <section class="desc-user__container">
+            <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+            <div class="user__desc">
+              <h3>Samuel Leão</h3>
+              <p>Front End Enginner</p>
+            </div>
+          </section>
+          <h4>Title</h4>
+          <p>Descrição</p>
+          <div class="post-button__container">
+            <button class="button__post">Abrir post</button>
+            <span class="post__heart" style="font-weight: 900px; font-size: 1.2rem; color: red; ">&hearts;</span>
+            <p>21</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <dialog class="modal__controller">
+    <section class="modal__container">
+      <section class="modal-top__container">
+        <section class="desc-user__container">
+          <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+          <div class="user__desc">
+            <h3>Samuel Leão</h3>
+            <p>Front End Enginner</p>
+          </div>
+        </section>
+        <button class="modal__close">X</button>
+      </section>
+
+      <section class="modal-post__container">
+        <h4>Empresa de Tecnologia da Informação abre vagas para programa de estágio</h4>
+        <p>A Framework Digital, empresa mineira especializada em Tecnologia da Informação, irá iniciar o seu sexto
+          programa de estágio, com o prazo de inscrições entre os dias 08 e 28 de agosto. O programa é conhecido como
+          Framework Padawans, com inspiração nos filmes Star Wars. Nas histórias, os iniciantes fazem treinamentos para
+          se
+          tornar cavaleiros Jedi, que compõem o lado bom da força.
+        </p>
+      </section>
+    </section>
+  </dialog>
+
+  <script type="module" src="./src/scripts/index.js"></script>
+</body>
+
 </html>

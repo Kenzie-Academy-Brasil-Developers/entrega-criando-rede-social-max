@@ -1,0 +1,78 @@
+.main__container {
+    margin-top: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-post__container {
+    margin: 0 0.625rem;
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.post-form__container {
+    gap: 10px;
+}
+
+.input__form {
+    width: 100%;
+
+    color: var(--color-grey3);
+    padding: 2px;
+    font-size: 13px;
+
+    border: 2px solid var(--color-grey3);
+    border-radius: 3px;
+}
+
+.text__form {
+    width: 100%;
+    height: 60px;
+
+    padding: 2px;
+    font-size: 13px;
+
+    color: var(--color-grey3);
+
+    border: 2px solid var(--color-grey3);
+    border-radius: 3px;
+
+    resize: none;
+
+    margin-top: 5px;
+}
+
+.text__form:focus,
+.input__form:focus {
+    border: 2px solid var(--color-blue-whiter);
+}
+
+.text__form:valid,
+.input__form:valid {
+    border: 2px solid var(--color-grey3);
+    color: var(--color-grey2);
+}
+
+.follow-suggestions__container {
+    width: 100%;
+    margin: 15px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.main-list__suggestions {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.list__suggestions {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 7px;
+    margin-right: 15px;    
+}
