@@ -1,7 +1,7 @@
-import { posts } from "./database.js";
-import { suggestUsers } from "./database.js";
-import { createModal } from "./modal.js";
-import { render } from "./render.js";
+import { posts } from './database.js';
+import { suggestUsers } from './database.js';
+import { createModal } from './modal.js';
+import { render } from './render.js';
 
 function handleModal() {
   const modalController = document.querySelector('.modal__controller')
@@ -12,8 +12,6 @@ function handleModal() {
 
     button.addEventListener('click', function(event) {
       modalController.innerHTML = ''
-      
-      console.log(event.target.dataset.clientId)
 
       const modalContent = createModal(event.target.dataset.clientId)
 
@@ -31,11 +29,26 @@ function closeModal() {
   const closeButton = document.querySelector('.modal__close')
   const modalController = document.querySelector('.modal__controller')
 
-  console.log(closeButton)
-
   closeButton.addEventListener('click', function() {
     modalController.close()
   })
+}
+
+function clickButton(){
+  const mainSuggestions = document.querySelector('.main-list__suggestions')
+  const buttonSuggestion = document.querySelector('.button__suggestion')
+
+  for(let j = 0; j < buttonSuggestion.length; j++){
+    const button = buttonSuggestion[j]
+
+    button.addEventListener('click', function(event){
+      const eventButtonSuggestion = buttonSuggestion()
+    })
+    
+  }
+  
+
+
 }
 
 render(posts, 1)

@@ -9,8 +9,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./src/styles/reset.css" />
   <link rel="stylesheet" href="./src/styles/globalStyles.css">
-  <link rel="stylesheet" href="./src/styles/buttons.css">
   <link rel="stylesheet" href="./src/styles/users.css">
+  <link rel="stylesheet" href="./src/styles/buttons.css">
   <link rel="stylesheet" href="./src/styles/index.css" />
 
   <!-- FONTE -->
@@ -23,86 +23,119 @@
 </head>
 
 <body>
-  <header class="header__container">
-    <h1>TechPosters</h1>
-    <p>Sair</p>
-  </header>
-  <main class="main__container">
-    <section class="submit-post__container">
-      <section class="desc-user__container">
-        <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
-        <div class="user__desc">
-          <h2>Samuel Leão</h2>
-          <p>Front End Enginner</p>
-        </div>
-      </section>
-      <form class="post-form__container">
-        <input class="input__form" type="text" placeholder="Digitar título do post" required>
-        <textarea class="text__form" placeholder="Digitar descrição do post" wrap="soft" required></textarea>
-      </form>
-      <section class="button-form__container">
-        <button class="button__form">Postar</button>
-      </section>
+  <header>
+    <section class="container header__container">
+      <h1>TechPosters</h1>
+      <p>Sair</p>
     </section>
+  </header>
+  <section class="main_aside container fixed">
+    <main class="main__container">
+      <section class="submit-post__container">
+        <div class="desc-user__container">
+          <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+          <div class="user__desc">
+            <h2>Samuel Leão</h2>
+            <p>Front End Enginner</p>
+          </div>
+        </div>
+        <form class="post-form__container">
+          <input class="input__form" type="text" placeholder="Digitar título do post" required>
+          <textarea class="text__form" placeholder="Digitar descrição do post" wrap="soft" required></textarea>
+        </form>
+        <section class="button-form__container">
+          <button class="button__form">Postar</button>
+        </section>
+      </section>
+      <!-- Asside Mobile -->
+      <aside class="mobile-follow-suggestions__container">
+        <h3>Sugestões para você seguir</h3>
+        <ul class="main-list__suggestions">
+          <li class="list__suggestions">
+            <div class="desc-user__container">
+              <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+              <div class="user__desc">
+                <h3>Samuel Leão</h3>
+                <p>Front End Enginner</p>
+              </div>
+            </div>
+            <button class="button__suggestion">Seguir</button>
+          </li>
+          <li class="list__suggestions">
+            <div class="desc-user__container">
+              <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+              <div class="user__desc">
+                <h3>Samuel Leão</h3>
+                <p>Front End Enginner</p>
+              </div>
+            </div>
+            <button class="button__suggestion">Seguir</button>
+          </li>
+        </ul>
+      </aside>
 
-    <aside class="follow-suggestions__container">
+      <section class="posts__container">
+        <h2>Posts</h2>
+        <ul class="main-list__posts">
+          <li class="list__posts">
+            <div class="desc-user__container">
+              <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+              <div class="user__desc">
+                <h3>Samuel Leão</h3>
+                <p>Front End Enginner</p>
+              </div>
+            </div>
+            <h4>Title</h4>
+            <p>Descrição</p>
+            <div class="post-button__container">
+              <button class="button__post">Abrir post</button>
+              <div class="heart__container">
+                <span class="post__heart" style="font-weight: 900px; font-size: 1.2rem; color: red; ">&hearts;</span>
+                <p>21</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- Asside Windows -->
+    <aside class="desktop-follow-suggestions__container">
       <h3>Sugestões para você seguir</h3>
       <ul class="main-list__suggestions">
         <li class="list__suggestions">
-          <section class="desc-user__container">
+          <div class="desc-user__container">
             <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
             <div class="user__desc">
               <h3>Samuel Leão</h3>
               <p>Front End Enginner</p>
             </div>
-          </section>
+          </div>
           <button class="button__suggestion">Seguir</button>
         </li>
         <li class="list__suggestions">
-          <section class="desc-user__container">
+          <div class="desc-user__container">
             <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
             <div class="user__desc">
               <h3>Samuel Leão</h3>
               <p>Front End Enginner</p>
             </div>
-          </section>
+          </div>
           <button class="button__suggestion">Seguir</button>
         </li>
       </ul>
     </aside>
-
-    <section class="posts__container">
-      <ul class="main-list__posts">
-        <li class="list__posts">
-          <section class="desc-user__container">
-            <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
-            <div class="user__desc">
-              <h3>Samuel Leão</h3>
-              <p>Front End Enginner</p>
-            </div>
-          </section>
-          <h4>Title</h4>
-          <p>Descrição</p>
-          <div class="post-button__container">
-            <button class="button__post">Abrir post</button>
-            <span class="post__heart" style="font-weight: 900px; font-size: 1.2rem; color: red; ">&hearts;</span>
-            <p>21</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </main>
+  </section>
 
   <dialog class="modal__controller">
     <section class="modal__container">
       <section class="modal-top__container">
-        <section class="desc-user__container">
+        <div class="desc-user__container">
           <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
           <div class="user__desc">
             <h3>Samuel Leão</h3>
             <p>Front End Enginner</p>
           </div>
-        </section>
+        </div>
         <button class="modal__close">X</button>
       </section>
 

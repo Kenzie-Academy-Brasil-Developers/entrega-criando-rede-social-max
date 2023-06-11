@@ -1,4 +1,4 @@
-.button-form__container{
+.button-form__container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -13,10 +13,41 @@
     border-radius: 5px;
 }
 
-.button__form:hover{
+.button__form:hover {
     background-color: var(--color-blue);
 }
 
-.button__suggestion{
-    border: 2px solid var(--color-grey1);
+.button__post {
+    width: 85px;
+    height: 39px;
+
+    background-color: var(--color-grey1);
+    color: var(--white);
+
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.button__post:hover{
+    background-color: var(--color-grey0);
+}
+
+.button__suggestion {
+    width: 68px;
+    height: 28px;
+    
+    background-color: var(--white);
+    color: var(--color-grey1);
+
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.8rem;
+
+    border: 1px solid var(--color-grey1);
+}
+
+.button__suggestion:hover{
+    border: 1px solid var(--color-blue-whiter);
+    color: var(--color-blue-whiter);
 }
