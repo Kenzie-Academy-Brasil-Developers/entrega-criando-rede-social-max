@@ -1,16 +1,16 @@
-import { posts } from './database.js';
+import { posts, users } from './database.js';
 import { suggestUsers } from './database.js';
-import { createModal } from './modal.js';
+import { closeModal, closeModalOutlineClick, createModal } from './modal.js';
 import { render } from './render.js';
 
-function handleModal() {
+export const handleModal = () => {
   const modalController = document.querySelector('.modal__controller')
   const buttonPost = document.querySelectorAll('.button__post')
 
-  for(let i = 0; i < buttonPost.length; i++) {
+  for (let i = 0; i < buttonPost.length; i++) {
     const button = buttonPost[i]
 
-    button.addEventListener('click', function(event) {
+    button.addEventListener('click', (event) => {
       modalController.innerHTML = ''
 
       const modalContent = createModal(event.target.dataset.clientId)
@@ -20,37 +20,49 @@ function handleModal() {
       modalController.showModal()
 
       closeModal()
-
+      closeModalOutlineClick()
     })
   }
 }
 
-function closeModal() {
-  const closeButton = document.querySelector('.modal__close')
-  const modalController = document.querySelector('.modal__controller')
+const insertPost = () => {
+  const buttonForm = document.querySelector('.button__form')
+  const inputTitle = document.querySelector('.input__form')
+  const inputText = document.querySelector('.text__form')
+  const validationMessages = document.querySelector('.validation-message');
 
-  closeButton.addEventListener('click', function() {
-    modalController.close()
+  buttonForm.addEventListener('click', (event) => {
+    const clientId = Number(event.target.dataset.clientId)
+
+    event.preventDefault();
+
+    if (inputTitle.value === '' || inputText.value === '') {
+      validationMessages.style.display = 'block';
+      validationMessages.textContent = 'Por favor, preencha todos os campos.';
+      return;
+    }
+
+    let newValue = {}
+    console.log(event.target.dataset.clientId)
+    const userSearch = users.find((user) => user.id === clientId)
+
+    newValue.user = userSearch.user;
+    newValue.stack = userSearch.stack;
+    newValue.img = userSearch.img;
+    newValue.title = inputTitle.value;
+    newValue.text = inputText.value;
+    newValue.id = posts.length + 1;
+    newValue.likes = 0
+    posts.push(newValue)
+
+    validationMessages.style.display = 'none';
+
+    inputTitle.value = ''
+    inputText.value = ''
+    render(posts, 1)
   })
-}
-
-function clickButton(){
-  const mainSuggestions = document.querySelector('.main-list__suggestions')
-  const buttonSuggestion = document.querySelector('.button__suggestion')
-
-  for(let j = 0; j < buttonSuggestion.length; j++){
-    const button = buttonSuggestion[j]
-
-    button.addEventListener('click', function(event){
-      const eventButtonSuggestion = buttonSuggestion()
-    })
-    
-  }
-  
-
-
 }
 
 render(posts, 1)
 render(suggestUsers, 2)
-handleModal()
+insertPost()

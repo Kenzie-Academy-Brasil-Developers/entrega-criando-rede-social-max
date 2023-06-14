@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 15px;
 }
 
 .button__form {
@@ -15,6 +16,15 @@
 
 .button__form:hover {
     background-color: var(--color-blue);
+}
+
+.validation-message {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+
+    display: none;
+    color: var(--color-grey1);
 }
 
 .button__post {
@@ -33,13 +43,26 @@
     background-color: var(--color-grey0);
 }
 
+.seguindo__suggestion{
+    width: 89px;
+    height: 28px;
+    
+    background-color: var(--color-blue-whiter);
+    color: var(--white);
+
+    border-radius: 4px;
+    padding: 0 10px 0 10px ;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
 .button__suggestion {
     width: 68px;
     height: 28px;
     
     background-color: var(--white);
     color: var(--color-grey1);
-
+    padding: 0 10px 0 10px ;
     border-radius: 4px;
     font-weight: 500;
     font-size: 0.8rem;
@@ -49,5 +72,8 @@
 
 .button__suggestion:hover{
     border: 1px solid var(--color-blue-whiter);
+    background-color: var(--color-grey6);
     color: var(--color-blue-whiter);
 }
+
+

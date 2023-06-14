@@ -1,6 +1,6 @@
 import { posts } from "./database.js"
 
-export function createModal(clientId) {
+export const createModal = (clientId) => {
     let client = {}
 
     for (let i = 0; i < posts.length; i++) {
@@ -23,10 +23,10 @@ export function createModal(clientId) {
     const textPost = document.createElement('p')
 
     modalContainer.classList.add('modal__container')
-    topContainer.classList.add('modal-top_container')
+    topContainer.classList.add('modal-top__container')
     userContainer.classList.add('desc-user__container')
     userDesc.classList.add('user__desc')
-    closeButton.classList.add('modal__close')
+    closeButton.classList.add('modal-close__button')
     imgUser.classList.add('user__img')
 
     imgUser.src = client.img
@@ -46,4 +46,27 @@ export function createModal(clientId) {
     postContainer.append(titlePost, textPost)
 
     return modalContainer
+}
+
+export const closeModal = () => {
+    const buttonX = document.querySelector('.modal-close__button')
+    const modalController = document.querySelector('.modal__controller')
+
+    const buttonsEvent = () => {
+        modalController.close()
+    }
+
+    buttonX.addEventListener('click', buttonsEvent)
+}
+
+export const closeModalOutlineClick = () => {
+    const body = document.querySelector('body')
+
+    body.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal__controller')) {
+            const modal = document.querySelector('.modal__controller')
+
+            modal.close()
+        }
+    })
 }

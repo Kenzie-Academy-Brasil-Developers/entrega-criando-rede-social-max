@@ -7,12 +7,17 @@
     --color-grey3: #868E96;
     --color-grey4: #DEE2E6;
     --color-grey5: #F8F9FA;
+    --color-grey6: #EDF2FF;
     --color-grey-opacity: rgba(33, 37, 41, 0.5);
     --white: #ffffff;
     
     --font-weiht-title: 700;
     --font-size-title: 1.25rem;
 
+}
+
+::backdrop {
+    --background-backdrop-color: rgba(33, 37, 41, 0.5);
 }
 
 img{
@@ -43,7 +48,7 @@ header {
     justify-content: space-between;
 
     z-index: 10;
-    /* border: 1px solid red; */
+
     color: var(--white);
     background-color: var(--color-grey1);
 }

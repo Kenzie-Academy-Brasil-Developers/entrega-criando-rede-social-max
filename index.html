@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./src/styles/globalStyles.css">
   <link rel="stylesheet" href="./src/styles/users.css">
   <link rel="stylesheet" href="./src/styles/buttons.css">
+  <link rel="stylesheet" href="./src/styles/modal.css">
   <link rel="stylesheet" href="./src/styles/index.css" />
 
   <!-- FONTE -->
@@ -32,20 +33,21 @@
   <section class="main_aside container fixed">
     <main class="main__container">
       <section class="submit-post__container">
-        <div class="desc-user__container">
-          <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
-          <div class="user__desc">
-            <h2>Samuel Leão</h2>
-            <p>Front End Enginner</p>
-          </div>
-        </div>
         <form class="post-form__container">
+          <div class="desc-user__container">
+            <img class="user__img" src="./src/assets/img/user1.svg" alt="Samuel Leão">
+            <div class="user__desc">
+              <h2>Samuel Leão</h2>
+              <p>Front End Enginner</p>
+            </div>
+          </div>
           <input class="input__form" type="text" placeholder="Digitar título do post" required>
           <textarea class="text__form" placeholder="Digitar descrição do post" wrap="soft" required></textarea>
+          <section class="button-form__container">
+            <span class="validation-message"></span>
+            <button class="button__form" type="submit" data-client-id="1">Postar</button>
+          </section>
         </form>
-        <section class="button-form__container">
-          <button class="button__form">Postar</button>
-        </section>
       </section>
       <!-- Asside Mobile -->
       <aside class="mobile-follow-suggestions__container">
@@ -90,7 +92,7 @@
             <div class="post-button__container">
               <button class="button__post">Abrir post</button>
               <div class="heart__container">
-                <span class="post__heart" style="font-weight: 900px; font-size: 1.2rem; color: red; ">&hearts;</span>
+                <img src="./src/assets/img/heart-red.png" alt="heart-grey">
                 <p>21</p>
               </div>
             </div>
@@ -126,7 +128,7 @@
     </aside>
   </section>
 
-  <dialog class="modal__controller">
+  <dialog class="container modal__controller">
     <section class="modal__container">
       <section class="modal-top__container">
         <div class="desc-user__container">
@@ -136,7 +138,7 @@
             <p>Front End Enginner</p>
           </div>
         </div>
-        <button class="modal__close">X</button>
+        <button class="modal-close__button">X</button>
       </section>
 
       <section class="modal-post__container">
