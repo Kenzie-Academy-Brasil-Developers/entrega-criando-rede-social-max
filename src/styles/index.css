@@ -93,6 +93,11 @@
     gap: 15px;
 }
 
+.title__suggestion{
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weiht-title);
+}
+
 .list__suggestions {
     min-width: 15.5rem;
     height: 6rem;
@@ -217,4 +222,5 @@
     .mobile-follow-suggestions__container {
         display: none;
     }
+
 }
