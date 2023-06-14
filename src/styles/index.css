@@ -93,7 +93,7 @@
     gap: 15px;
 }
 
-.title__suggestion{
+.title__suggestion {
     font-size: var(--font-size-title);
     font-weight: var(--font-weiht-title);
 }

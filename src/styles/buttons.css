@@ -12,6 +12,7 @@
     color: var(--white);
 
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .button__form:hover {
@@ -37,43 +38,51 @@
     border-radius: 4px;
     font-weight: 500;
     font-size: 0.8rem;
+
+    cursor: pointer;
 }
 
-.button__post:hover{
+.button__post:hover {
+
     background-color: var(--color-grey0);
 }
 
-.seguindo__suggestion{
+.seguindo__suggestion {
     width: 89px;
     height: 28px;
-    
+
     background-color: var(--color-blue-whiter);
     color: var(--white);
 
     border-radius: 4px;
-    padding: 0 10px 0 10px ;
+    padding: 0 10px 0 10px;
     font-weight: 500;
     font-size: 0.8rem;
+
+    cursor: pointer;
+}
+
+.seguindo__suggestion:hover {
+    background-color: var(--color-blue);
 }
 
 .button__suggestion {
     width: 68px;
     height: 28px;
-    
+
     background-color: var(--white);
     color: var(--color-grey1);
-    padding: 0 10px 0 10px ;
+    padding: 0 10px 0 10px;
     border-radius: 4px;
     font-weight: 500;
     font-size: 0.8rem;
 
+    cursor: pointer;
     border: 1px solid var(--color-grey1);
 }
 
-.button__suggestion:hover{
+.button__suggestion:hover {
     border: 1px solid var(--color-blue-whiter);
     background-color: var(--color-grey6);
     color: var(--color-blue-whiter);
 }
-
-
